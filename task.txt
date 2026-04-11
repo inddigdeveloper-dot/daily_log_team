@@ -1,0 +1,410 @@
+I started working from wednesday 11/3/2026
+12/3/2026 - thursday 
+hemal shah
+
+Work on appointment project
+
+Flowchart and discussion with sahil.
+
+- API of google calendar API 
+- set up of python , fastAPI, 
+- work on google calendar , Oauth2Client testing
+- work on creating backend managent
+- set up of github repo
+- set up and integration with fastapi sqlalchemy 
+- got minor knowledge about R&D UI using bolt
+
+13/3/26
+Hemal Shah
+
+- Implement client-side location permission request.
+- Identify and store doctor's timezone via user settings.
+- Automate scheduling to match doctor/patient time zones.
+- Send emails using local recipient time zone logic.
+- Update UI calendar to reflect new timezone data.
+- Validate timezone changes and update in real-time.
+
+14/3/26
+Hemal Shah
+
+- Configure the project Dockerfile and environment setup.
+- Initialize the Docker image and container for the project.
+- Complete the installation and deployment of the Docker engine.
+- Enable hardware virtualization via BIOS settings for Docker compatibility.
+- Implement the Edit and Delete functional components in the frontend and backend.
+- Engineer backend logic for patient event deletion and date-specific updates.
+
+16-03-2026
+Hemal Shah
+
+- Brain Storming about project architecture upgradation
+- Architect the backend application into modular, maintainable components (main.py, database.py, auth.py)
+- Engineer a multi-tenant system to support independent doctor registration and dynamic patient booking workflows
+- Implement JWT-based authentication and secure backend endpoints with token-based route protection
+- Resolve database relational mapping to successfully link patient appointments to specific doctor profiles
+- Troubleshoot and resolve backend dependency conflicts between passlib and bcrypt for secure password hashing
+- Configure server connection protocols, CORS policies, and Swagger UI authorization mechanisms for API testing
+
+17-3-26
+Hemal shah
+
+set up of aisensy created template and created campeign 
+then used aisensy url and set up postman for testing 
+then did api testing using postman in real time 
+implemented two endpoints of sending otp on whatsapp and verifying otp endpoints
+uploaded UI on github pages npm run build npm run deploy
+ziya clinic - faq and tourist page 
+uploaded backend live on render
+
+18 - 3 - 2026 
+hemal shah
+completed sync of render and github pages live 
+solved 4 5 bugs and errors and pushed on github 
+Implement multi-field doctor registration (Clinic Name, Email, WhatsApp) with backend validation and secure hashing.
+Implemented the forgot pass in UI 
+made responsive UI and added email,whatsapp_no,username with password login auth 
+Update Doctor Registration Flow
+Frontend: Update the registration form to include the following required fields, ensuring mobile responsiveness and form validation:
+Name,Username,Email (Google ID),WhatsApp Number,Password,Confirm Password (with matching validation)
+Backend: Update the Doctor database model in SQLAlchemy (database.py) to store name and email. Update the Pydantic schema in main.py to accept these new fields.
+Frontend: Update the login input placeholder to say "Email, Username, or Mobile Number".
+Backend: Modify the login endpoint query so that the provided credential string is checked against the username, email, and whatsapp_no columns in the database before verifying the password.
+Frontend: Add a "Forgot Password?" link on the login page leading to a password reset request form.
+
+
+19-3-26
+Hemal shah
+
+medical appointment 
+- Forgor password feature
+- added message and email both side notifications
+- removed feature of UTC timezone of calculative time 
+- whatsapp confirmation message 
+- added reminder feature for patient appointment 
+- added google link button per clinet in doctor's dashboard
+Zeya clinic
+- update of dental_tourist page
+aashika beauty academy and laser treatment
+- website pages 
+ 
+20-3-26
+Hemal shah
+
+Zeya clinic
+- made FAQ page and added section on header
+
+medical appointment sys
+- user testing 
+- fixed campaign template of wp
+- created posgresql database 
+- fixed bug of apt error
+- fixed wp no error message
+- updated responsive page 1. doctorlogin 2. doctor dashboard/Global Responsive Design
+- uploaded on gh-pages
+- uploaded on railway backend
+- fixed bug in reminder scheduling jobs
+
+21-3-26
+Hemal shah
+
+- Solved Appointment Approval Workflow
+- Solved Registration & Database Schema Errors
+- Updated database full name for doctor 
+- Solved Login & Authentication Logic
+- Solved Forgot Password Error
+- Solved ai sensy confirmation message error 
+- Updated Database & Model Integrity
+- project is live and working 
+- added show appointment button for doctor 
+
+22-3-26
+Hemal Shah
+
+- Google cloud configuration 
+- Database migration added google_refresh_token and id 
+- Frontend development added login to goole calendar on dashboard 
+- added new flow authentication for individual customers for SaaS
+- resolved redirect uri mismatch error
+- implemented secured temporary cookies to handle Google's users with PKCE code verifier
+- Made template for appointment deletion 
+
+24-3-26
+Hemal Shah
+
+- aisensy customer care call delete_appointment template
+- uploaded frontend on get started button of inddig media 
+- made backend private repo from public 
+- set up of railway for appointment.in 
+- created custom zone domain app.appointment.in for medical appointment system 
+- connected GitHub link with custom domain from hostinger
+
+25-3-26
+Hemal shah
+
+- Fixed the Google Auth redirects 
+- Resolved fake CORS errors from the Frontend  
+- Automated google calendar sync logic and fixed auth from Google Calendar
+- had contact with customers for medical appointment sys 
+  --glow make
+  --divine multispecialist hospital
+  --Vijay dental clinic
+- watched the claude code video full 
+
+26-3-26
+Hemal Shah
+
+- downloaded and reverse engineered the whole gmb review project
+- made stratergy to use which AImodel to generate the answer for our automated review 
+- analyzed existing files (functions.php, reply_worker.php, get_pending.php) 
+- identified need token refresh for google auth for long term 
+- checkout the tokens per week and day and minut for each free different models
+- modified oauth2callback.php 
+
+Created run_bot.php — final unified PHP automation file callable via HTTP from n8n, replacing Python script due to Railway/Hostinger server separation issue
+Set up n8n workflow on Railway with 4 nodes — Schedule Trigger (15 min), HTTP Request, IF error check, Log Failure
+Connected n8n-mcp to Claude Code via VS Code terminal for direct workflow building
+Resolved Execute Command node failure — identified Railway and Hostinger are separate servers, redesigned architecture accordingly
+Configured $allowedAccounts filter in run_bot.php to process only gmbinddig@gmail.com as per Google team's approval for testing
+Uploaded run_bot.php to Hostinger and tested via Postman — confirmed 200 OK response
+Diagnosed and troubleshot GROQ_API_KEY not configured error — identified Hostinger PHP-FPM ignores Apache SetEnv directive
+Resolved GROQ API key environment variable issue on Hostinger
+
+27-3-26
+Hemal shah
+
+- connected both PC of the developer with MCP of VS code 
+- added deleteion appointment message on whatsapp 
+- zeya clinic 
+ -- added consultant section and a new doctor on about page 
+- added medical sys in dental square clinic
+- Created run_bot.php — final unified PHP automation file callable via HTTP from n8n
+- set up of workflow in n8n for the review automation 
+- fixed and troubleshot GROQ_API_KEY not configured error 
+- fixed .env and .htaccess file on hostinger of review project 
+
+
+28-3-26
+Hemal Shah
+- solved google review automations error 
+- created run_bot.php for automatic run of selected google IDs
+- aashika 
+-- index.php
+-- contact.php
+-- aboutus.php
+-- created database with admin for aashika 
+-- created dynamic admin for aashika
+
+30-3-26
+Hemal Shah
+-solved review reply bugs and checked on 3rd degree gym 
+-aashika Beauty Care Academy & Laser Center
+--index.php
+--gallery.php
+--blogs.php
+--created responsive wesbite 
+-visited rightchoiceAI and created a report
+
+31-3-26
+Hemal Shah
+-gmb_review
+--solved auto reply manually bug in gmb_review 
+--created workflow on n8n and testing for automation 
+-conversation - Aashika Beauty Care Academy & Laser Center
+
+-Aashika Beauty Care Academy & Laser Center
+--services.php
+--about.php
+--contact.php
+--uploaded on subdomain on hostinger 
+
+-zeya dental clinic
+--added blog in zeya clinic
+
+1-4-26
+-gmb_review 
+-- removed whole automation architecture because of errors
+-- upgraded new architecture for automation on gmb_review 
+-- created new file run_account.php
+-- run R&D on automation of gmb_review
+
+-rightchoiceAI
+-- attended a meeting with sales person of the platform
+
+-gmb_map
+-- created plan and read documentation on google business profile API
+
+2-4-26
+-gmb_review 
+-- r and d on each account and architecture upgrade for time complexity
+
+- dwija ayurvedic hospital
+-- created admin panel
+-- created blogs and services 
+-- index.php
+
+-aashika 
+-- meeting and client consultation for website 
+-- changed photos on different services according to client 
+
+3-4-26
+-gmb_review
+--finalarchitecture fo fetching pages into n8n workflow of google businesses
+
+-dwija ayurvedic 
+--blog.php
+--contact.php
+--main.css according to client's reference
+
+-aashika beauty care 
+--discussion about changes of the services on page 
+--discussion about images 
+
+4-4-26
+hemal shah
+
+-dwija ayurvedic
+--doctors.php
+--blog.php alignment error , overlay improvement
+--aboutus.php
+
+-conversation
+--aashika beauty care 
+--dr ritu dental clinic - 13 times 
+--manavdantseva hospitality
+
+6-4-26
+hemal shah
+-dwija ayurvedic
+--completion of website 
+--made responsive all webpages
+
+-gmb_review
+--workflow is completed and replying all 50 customers after fetching 
+
+-conversation
+--aashika beauty care
+--dwija ayurvedic
+
+7-4-26
+Hemal Shah
+
+-Aashika beauty and care 
+-- updated whole service sections according to client
+-- changes photos in database according to client
+
+-dwija yurvedic 
+--website is live on subdomain
+--cleared all bugs 
+--made an attractive frontend 
+
+-conversation
+--Aashika beauty and care 
+
+8-4-26
+
+Hemal Shah
+
+-Aashika beauty and care 
+-- updated new gallery with bridal section 
+-- made responsive for bridal and gallery section
+-- changed admin panel 
+
+-Conversation
+-- Dwija ayurveda and pankarma hospital
+-- Aashika beauty and care
+
+-GMB review 
+-- created new file fetch_replied_reviews.php
+
+9-4-26
+
+Hemal Shah
+
+-Aashika beauty and care 
+-- created admin panel 
+-- made live on aashika beauty and care 
+-- added inquiry.php 
+
+-GMB review 
+-- created workflow for fetching replies from one of the email id 
+
+-dwijaa
+-- added theme on frontend 
+-- added animation on cursor 
+
+10-4-26
+
+Hemal Shah
+
+-Dwija Ayurveda
+--Upgraded admin authentication system in login.php and reset-pass.php
+--Refactored admin/config.php to use secure connection error handling 
+
+-GMB Review 
+--Built an AI Agent integration with custom system prompts to generate unique-AI training 
+--brand-aligned replies based on star ratings.
+
+-Aashika Beauty and Care
+--changes in service page 
+
+-conversation 
+--Aashika beauty and care 
+--Aesthetic blush
+
+Deployed the live site and configured server environment.
+
+Added inquiry.php to handle customer leads via database integration.
+
+Applied a custom frontend theme with cursor-following liquid animations.
+
+10-4-26
+
+Hemal Shah
+
+- Dwija Ayurveda
+
+Security Hardening: * Identified and patched critical SQL injection vulnerabilities in team.php, gallery.php, blog.php, video.php, services-detail.php, services1-detail.php, and product.php by wrapping all inputs in mysqli_real_escape_string.
+
+Upgraded admin authentication system in login.php and reset-pass.php, replacing outdated MD5 hashing with modern password_hash (Bcrypt) and password_verify.
+
+Refactored admin/config.php to use secure connection error handling and enforced utf8mb4 encoding for database security.
+
+Frontend Remediation:
+
+Resolved script race conditions in top.php by unifying jQuery and Lenis load orders.
+
+Fixed premature AOS.init() timing on the contact page by wrapping it in a proper $(document).ready() block.
+
+Global cleanup of 404 console errors by removing dead SmoothScroll.js tags across all pages.
+
+Implemented fluid-interactions.js across the entire site for consistent theme animations.
+
+UI/UX Updates:
+
+Corrected Slick Slider logic by migrating broken autoplayTimeout properties to valid autoplaySpeed attributes in main.js.
+
+Standardized site navigation by deleting the legacy header.php and migrating all pages to header2.php.
+
+Fixed icon discrepancies and unified mismatched social media links/phone formats between header and footer templates.
+
+- GMB Review Automation
+
+Created an n8n automation workflow to fetch GMB reviews from email.
+
+Developed a JavaScript-based data extraction node to parse reviewer names, comments, and ratings.
+
+Built an AI Agent integration with custom system prompts to generate unique, brand-aligned replies based on star ratings.
+
+- Aashika Beauty and Care
+
+Created custom admin panel for content management.
+
+Deployed the live site and configured server environment.
+
+Added inquiry.php to handle customer leads via database integration.
+
+Applied a custom frontend theme with cursor-following liquid animations.
+
+
+
+
