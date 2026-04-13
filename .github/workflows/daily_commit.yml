@@ -1,0 +1,42 @@
+name: inddig's daily commit
+
+on:
+  schedule:
+    - cron: "0 0 * * *" #runs at 00:00 UTC everyday
+  workflow_dispatch: # allows manual trigger of the workflow 
+    
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # allows the workflow to push changes
+
+    steps:
+      - name: Checkout respository
+        uses: actions/checkout@v4
+
+      - name: Update file and commit
+        run: |
+          FILE_NAME="daily_commit.md"
+
+          # create or update the file 
+          
+          if [ ! -f "$FILE_NAME" ]; then
+            echo "This file is created by github action for daily commit.">> $FILE_NAME
+            echo "commit number: 1 ">> $FILE_NAME
+          else
+            CURRENT_COUNT=$(grep -oP 'commit number: \K\d+' "$FILE")
+            if [ -z "$CURRENT_COUNT" ]; then 
+              CURRENT_COUNT=0 
+            fi 
+            NEXT_COUNT=$((CURRENT_COUNT+1))
+            sed -i "/commit number: /c\commit number: $NEXT_COUNT" "$FILE"
+          fi 
+          git config --global user.name "inddigdeveloper-dot"
+          git config --global user.email "inddigdeveloper@gmail.com"
+          git add "$FILE"
+          git commit -m "Daily commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/inddigdeveloper-dot/daily_log_team.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
