@@ -422,3 +422,19 @@ hemal shah
 --ganesh motors
 --aryan for akhani consultaion 
 
+16-4-2026
+
+hemal shah 
+
+-gmb_review
+--training of AI agent for gmbinddig reviews
+--upgration of logic in workflow for only star reviews
+
+-ganesh motors
+--added more services in service.php
+--added new images gallery.php
+--corrected cvhanges on index.php
+--corrected cvhanges on aboutus.php
+
+-conversation 
+--ganesh motors
