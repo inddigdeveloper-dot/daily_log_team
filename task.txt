@@ -454,4 +454,17 @@ hemal shah
 -zeya dental clinic
 --update in blog.php
 
+18-4-26
+
+Hemal Shah
+
+-GMB_review project for local business
+--research and developement of architecture
+--techstack planning , worked on QR generation
+
+-work on hostinger
+
+-Sona Group Tution 
+--index.php
+--aboutus.php
 
