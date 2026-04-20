@@ -468,3 +468,20 @@ Hemal Shah
 --index.php
 --aboutus.php
 
+20-4-26
+
+Hemal Shah
+
+-GMB_review project for local business
+--research and development of architecture
+--techstack planning (FastAPI, LlamaIndex, DuckDB), worked on file-by-file breakdown and backend roadmaps
+--development of frontend templates (customer bridge + merchant dashboard) using Jinja2, Tailwind, and HTMX
+
+-Website Administration & Debugging
+--debugging JavaScript errors and fixing 404 image loading issues
+
+-Sona Group Tuition
+--animation-page.php (Full content update including faculty, batches, and testimonials)
+--contact-us.php
+--footer.php and social media integration
+
