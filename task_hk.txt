@@ -499,3 +499,29 @@ Hemal Shah
 --Troubleshooting Windows PATH and Python interpreter conflicts for Uvicorn and library dependencies [cite: 1, 2]
 --Modified the QR service logic to strip GUI dependencies, ensuring server-side stability for future production deployment [cite: 1, 2]
 --Audited Pydantic and SQLAlchemy codebase for syntax accuracy, ensuring full compatibility with Pydantic v2 and SQLAlchemy 2.0 standards [cite: 1, 2]
+
+22-4-26
+
+Hemal Shah
+
+-Doctor make appointment project 
+--migrating hardcoded credentials to .env and implementing .gitignore
+--Conducted massive architectural refactor into routes/, schemas/, and services/
+--Debugged AiSensy WhatsApp API payload mismatch 
+--corrected dynamic URL template variables
+--Resolved critical production 502/CORS 
+
+--Established tests/ suite with pytest fixtures and initialized CLAUDE.md documentation for agentic workflow
+--Restored and reconfigured Git identity/history following local repository corruption
+
+-meeting
+--Technical sync on monorepo architecture and production deployment strategy
+
+conversation (appointment sys)
+--myra dental clinic
+--dwija ayurveda and panchkarma hospital 
+--glowmac hospital
+--dr hetal chaudari
+--swaqsthya family clinic
+--Gandhinagar orthopedic 
+--
