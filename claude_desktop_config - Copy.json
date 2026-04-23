@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "n8n-mcp": {
+      "command": "C:\\Program Files\\nodejs\\npx.cmd",
+      "args": [
+        "n8n-mcp",
+        "--url",
+        "https://primary-production-96bd8.up.railway.app/api/v1",
+        "--key",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNTMwOTM4MC0wYjVkLTQ3ZDMtYjJiMC02N2M4YzBiZWZjZTEiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiMjUwNjcxNWItOGM0NS00N2QzLTkyYTItMzYzNjRjYmVjMTM0IiwiaWF0IjoxNzc2Nzc0OTYzLCJleHAiOjE3NzkzMzYwMDB9.vCFIEnhJlBjCDVUbLhK_3J1b8FGo87HGa0V_RU3Y5Ew"
+      ]
+    },
+    "vscode": {
+      "command": "C:\\Program Files\\nodejs\\npx.cmd",
+      "args": [
+        "-y",
+        "@vscode-mcp/vscode-mcp-server@latest"
+      ]
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "chat",
+    "coworkWebSearchEnabled": true,
+    "coworkOnboardingResumeStep": {
+      "step": "ios",
+      "accountKey": "c94e31a9-d4e3-4243-b202-acf1ce32588c:fa61318b-b628-4b57-87f3-c791ac8ce0cd"
+    }
+  }
+}

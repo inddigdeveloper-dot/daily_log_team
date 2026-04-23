@@ -35,7 +35,7 @@ jobs:
           fi 
           git config --global user.name "inddigdeveloper-dot"
           git config --global user.email "inddigdeveloper@gmail.com"
-          git add .
+          git add task_hk.txt
           git commit -m "Daily commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/inddigdeveloper-dot/daily_log_team.git
         env:
