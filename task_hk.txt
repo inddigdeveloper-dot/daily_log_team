@@ -525,3 +525,33 @@ conversation (appointment sys)
 --swaqsthya family clinic
 --Gandhinagar orthopedic 
 --
+
+23-4-26
+
+Hemal Shah
+
+-GMB_review project for local business
+--Completed all three auth endpoints (Register, Login, Google)
+--Completed auth service logic and token verification
+--Diagnosed PostgreSQL schema mismatches
+
+-make appointment project 
+--solved network error problem for clients
+
+-conversation
+--dwijaa ayurveda and panchkarma hospital
+--dental square dental clinic
+
+24-4-26
+
+Hemal shah
+
+-GMB_review project for local business
+--Upgraded ORM models and schemas for Google OAuth
+--Server startup and environment variables configuration
+--Completion of google auth system authentiacation 
+--creation and completion of client.js file API routes 
+--created file structure for frontend 
+
+-conversation 
+--glowmac aesthetics
