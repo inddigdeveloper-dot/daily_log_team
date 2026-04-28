@@ -563,3 +563,14 @@ Hemal shah
 -GMB_review project for local business
 --frontend of register page and backend completed
 
+25-4-26
+
+Hemal shah 
+
+-GMB_review project for local business
+--frontend of login page and backend completed with google auth and landing page 
+
+-Inddig autorank checker
+--solved errors
+--found vulnerabilities for production 
+--deployed 
