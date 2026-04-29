@@ -563,7 +563,7 @@ Hemal shah
 -GMB_review project for local business
 --frontend of register page and backend completed
 
-25-4-26
+27-4-26
 
 Hemal shah 
 
@@ -574,3 +574,11 @@ Hemal shah
 --solved errors
 --found vulnerabilities for production 
 --deployed 
+
+28-4-26
+
+Hemal shah
+-GMB_review project for local business
+--created landing page for dashboard 
+--work in progress of google review 
+URL and QR 
