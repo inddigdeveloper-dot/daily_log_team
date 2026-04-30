@@ -578,7 +578,16 @@ Hemal shah
 28-4-26
 
 Hemal shah
+
 -GMB_review project for local business
 --created landing page for dashboard 
 --work in progress of google review 
 URL and QR 
+
+29-4-26
+
+Hemal Shah
+
+-GMB_review project for local business 
+--completion of review and local_business 
+--start of AI model integration 
