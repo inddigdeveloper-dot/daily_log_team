@@ -591,3 +591,12 @@ Hemal Shah
 -GMB_review project for local business 
 --completion of review and local_business 
 --start of AI model integration 
+
+30-4-26
+
+Hemal shah
+
+-GMB_review project for local business 
+
+--error solutions in register and sign in system 
+--under process of review and QR generation backend 
