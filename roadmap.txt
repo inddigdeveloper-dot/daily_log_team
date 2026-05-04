@@ -201,3 +201,4 @@ Three things separate developers who make it from those who plateau. First, buil
 This roadmap will take six to twelve months of consistent effort to complete fully, depending on your starting point and time commitment. That sounds like a lot, but it's the realistic timeline to go from beginner to genuinely employable React developer. Anyone promising less is selling you something.
 
 Good luck. The hardest part is starting — and you've already done that by reading this.
+

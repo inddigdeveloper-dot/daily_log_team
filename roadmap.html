@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Developer Roadmap Tracker</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --primary: #0ea5e9;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-wrapper {
+            background: var(--border);
+            border-radius: 999px;
+            height: 12px;
+            width: 100%;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: var(--primary);
+            height: 100%;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        .stats {
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        details {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            padding: 1.25rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+            cursor: pointer;
+            user-select: none;
+            background-color: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        summary:hover {
+            background-color: #f1f5f9;
+        }
+
+        .content {
+            padding: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .subsection {
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-top: 0;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .checklist-item:hover {
+            background: #f8fafc;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 0.3rem;
+            margin-right: 1rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+            accent-color: var(--success);
+        }
+
+        label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .checked-text {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        .reset-btn {
+            display: block;
+            margin: 3rem auto 0;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            color: #ef4444;
+            border: 1px solid #ef4444;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .reset-btn:hover {
+            background: #fef2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>React Roadmap: Zero to Expert</h1>
+        <p>Interactive Tracker — Your progress is saved automatically.</p>
+        <div class="progress-wrapper">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="stats">Progress: <span id="progressText">0 / 0</span> completed</div>
+    </header>
+
+    <main id="roadmap-container">
+        <!-- Content gets generated via JS to keep HTML clean -->
+    </main>
+
+    <button class="reset-btn" onclick="resetProgress()">Reset All Progress</button>
+
+    <script>
+        const roadmapData = [
+            {
+                title: "Prerequisite Knowledge (The Foundations)",
+                sections: [
+                    {
+                        title: "HTML (Comfortable)",
+                        items: [
+                            "Semantic HTML5 elements (<header>, <nav>, <main>, etc.)",
+                            "Forms and all input types",
+                            "Accessibility basics (alt text, ARIA labels, semantic structure)",
+                            "Self-Check: Built a multi-page static site with a contact form from memory"
+                        ]
+                    },
+                    {
+                        title: "CSS (Intermediate)",
+                        items: [
+                            "The Box Model (Deeply understood)",
+                            "Flexbox (Non-negotiable)",
+                            "CSS Grid for layouts",
+                            "Responsive design and media queries",
+                            "CSS variables and pseudo-classes/elements",
+                            "Self-Check: Replicated a Figma design pixel-perfect without frameworks"
+                        ]
+                    },
+                    {
+                        title: "JavaScript (Solid Intermediate - CRITICAL)",
+                        items: [
+                            "Variables and scope (let, const, var, hoisting, closures)",
+                            "Data types and type coercion",
+                            "Array methods (map, filter, reduce, find, some, every)",
+                            "Object manipulation (destructuring, spread/rest operators)",
+                            "Arrow functions and 'this' keyword",
+                            "Promises, async/await, and the Fetch API",
+                            "Ternary operators and short-circuit evaluation (&&, ||, ??)",
+                            "Self-Check: Built a vanilla JS To-Do app with localStorage persistence"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Phase 1: Fundamentals (Weeks 1-4)",
+                sections: [
+                    {
+                        title: "Key Concepts",
+                        items: [
+                            "Declarative UI, component architecture, and Virtual DOM",
+                            "JSX syntax and compilation",
+                            "Functional components and props",
+                            "Conditional rendering and list rendering with keys",
+                            "Event handling and forms (controlled components)",
+                            "useState and basic useEffect hooks",
+                            "Component composition and 'children' prop"
+                        ]
+                    },
+                    {
+                        title: "Hands-on Projects",
+                        items: [
+                            "Counter app (The Hello World)",
+                            "Tip calculator (Forms, state, derived values)",
+                            "To-do list with localStorage (CRUD operations)",
+                            "Weather app using public API (Async data with useEffect)",
+                            "Quiz app (Conditional rendering, scoring)"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Phase 2: Intermediate (Weeks 5-8)",
+                sections: [
+                    {
+                        title: "Key Concepts",
+                        items: [
+                            "Advanced useEffect (dependencies, cleanup, strict mode)",
+                            "useRef (DOM access, persistent values)",
+                            "useContext (Solving prop drilling)",
+                            "useReducer (Complex state logic)",
+                            "Custom Hooks (Unlocking React's power)",
+                            "React Router (Client-side routing)",
+                            "React.memo, useMemo, useCallback (Performance basics)"
+                        ]
+                    },
+                    {
+                        title: "Hands-on Projects",
+                        items: [
+                            "Multi-page blog with React Router (nested layouts)",
+                            "Recipe finder (Context API, custom hooks)",
+                            "Kanban board clone (Drag and drop, multiple lists)",
+                            "Movie DB app (Pagination, search debouncing)",
+                            "Real-time chat UI (WebSockets or polling)"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Phase 3: Advanced (Weeks 9-16)",
+                sections: [
+                    {
+                        title: "Key Concepts",
+                        items: [
+                            "TypeScript with React (props, hooks, generics, events)",
+                            "Client State Management (Zustand or Redux Toolkit)",
+                            "Server State Management (TanStack Query - Essential)",
+                            "Testing (Vitest/Jest + React Testing Library)",
+                            "Accessibility (a11y) in React",
+                            "Performance profiling with React DevTools",
+                            "Advanced patterns (Compound components, render props)",
+                            "Form libraries (React Hook Form + Zod)"
+                        ]
+                    },
+                    {
+                        title: "Hands-on Projects",
+                        items: [
+                            "E-commerce store (TypeScript, Stripe test mode)",
+                            "Project management dashboard (TanStack Query, optimistic updates)",
+                            "Social media clone (Infinite scroll, real-time updates)",
+                            "Analytics dashboard (Data viz with Recharts/Visx)",
+                            "Component library with Storybook"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Phase 4: Expert (Weeks 17+)",
+                sections: [
+                    {
+                        title: "Key Concepts",
+                        items: [
+                            "Next.js (App Router, Server Components, SSR/SSG)",
+                            "Authentication patterns (Auth.js, Clerk, custom JWT)",
+                            "Monorepos (Turborepo or Nx)",
+                            "Build tools deep dive (Vite, esbuild, SWC)",
+                            "Advanced animations (Framer Motion / React Spring)",
+                            "CI/CD pipelines and deployment strategies"
+                        ]
+                    },
+                    {
+                        title: "Portfolio-Defining Projects",
+                        items: [
+                            "A full SaaS product (Auth, billing, dashboard - deployed)",
+                            "A headless CMS with a consuming marketing site",
+                            "Open-source contribution to a known library",
+                            "Real-time collaborative tool (WebSockets, CRDTs)",
+                            "A custom developer tool (CLI, VS Code extension)"
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        const container = document.getElementById('roadmap-container');
+        let totalCheckboxes = 0;
+
+        // Generate the DOM
+        roadmapData.forEach((phase, phaseIndex) => {
+            const details = document.createElement('details');
+            if (phaseIndex === 0) details.open = true; // Open the first one by default
+            
+            const summary = document.createElement('summary');
+            summary.textContent = phase.title;
+            details.appendChild(summary);
+
+            const content = document.createElement('div');
+            content.className = 'content';
+
+            phase.sections.forEach((section, sectionIndex) => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'subsection';
+                
+                const h3 = document.createElement('h3');
+                h3.textContent = section.title;
+                sectionDiv.appendChild(h3);
+
+                section.items.forEach((item, itemIndex) => {
+                    totalCheckboxes++;
+                    const id = `check_${phaseIndex}_${sectionIndex}_${itemIndex}`;
+                    
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'checklist-item';
+                    
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.id = id;
+                    
+                    const label = document.createElement('label');
+                    label.htmlFor = id;
+                    label.textContent = item;
+
+                    // Event listener for checking
+                    checkbox.addEventListener('change', (e) => {
+                        if(e.target.checked) {
+                            label.classList.add('checked-text');
+                        } else {
+                            label.classList.remove('checked-text');
+                        }
+                        saveProgress();
+                        updateProgressUI();
+                    });
+
+                    itemDiv.appendChild(checkbox);
+                    itemDiv.appendChild(label);
+                    sectionDiv.appendChild(itemDiv);
+                });
+
+                content.appendChild(sectionDiv);
+            });
+
+            details.appendChild(content);
+            container.appendChild(details);
+        });
+
+        // Save to local storage
+        function saveProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const state = {};
+            checkboxes.forEach(cb => {
+                state[cb.id] = cb.checked;
+            });
+            localStorage.setItem('reactRoadmapProgress', JSON.stringify(state));
+        }
+
+        // Load from local storage
+        function loadProgress() {
+            const saved = localStorage.getItem('reactRoadmapProgress');
+            if (saved) {
+                const state = JSON.parse(saved);
+                for (const [id, isChecked] of Object.entries(state)) {
+                    const cb = document.getElementById(id);
+                    if (cb) {
+                        cb.checked = isChecked;
+                        if (isChecked) {
+                            const label = document.querySelector(`label[for="${id}"]`);
+                            if(label) label.classList.add('checked-text');
+                        }
+                    }
+                }
+            }
+            updateProgressUI();
+        }
+
+        // Update Progress Bar
+        function updateProgressUI() {
+            const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            const percentage = (checkedCount / totalCheckboxes) * 100;
+            
+            document.getElementById('progressBar').style.width = `${percentage}%`;
+            document.getElementById('progressText').textContent = `${checkedCount} / ${totalCheckboxes}`;
+        }
+
+        // Reset
+        function resetProgress() {
+            if(confirm("Are you sure you want to reset all your progress?")) {
+                localStorage.removeItem('reactRoadmapProgress');
+                document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                    cb.checked = false;
+                    const label = document.querySelector(`label[for="${cb.id}"]`);
+                    if(label) label.classList.remove('checked-text');
+                });
+                updateProgressUI();
+            }
+        }
+
+        // Init
+        loadProgress();
+    </script>
+</body>
+</html>
