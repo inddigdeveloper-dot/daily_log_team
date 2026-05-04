@@ -600,3 +600,12 @@ Hemal shah
 
 --error solutions in register and sign in system 
 --under process of review and QR generation backend 
+
+1-5-26
+
+Hemal shah
+
+-GMB_review project for local business
+
+--under process of dashboard settings backend integration
+--under process of Smart Reply AI backend endpoint
