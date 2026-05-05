@@ -609,3 +609,12 @@ Hemal shah
 
 --under process of dashboard settings backend integration
 --under process of Smart Reply AI backend endpoint
+
+4-5-26
+
+Hemal Shah
+
+-GMB_review project for local business
+
+--under process of dashboard page completion 
+--creation of frontend of smart AI reply page 
