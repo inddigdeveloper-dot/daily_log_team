@@ -627,3 +627,15 @@ Hemal Shah
 
 --completion of dashboard Page 
 --under process of AI reply backend 
+
+6-5-26
+
+Hemal Shah
+
+-Wisdom Academy classes
+
+--created index.php webpage 
+--added content accordingly 
+--changed information in footer
+--changed information in Header
+--added new style and animation 
