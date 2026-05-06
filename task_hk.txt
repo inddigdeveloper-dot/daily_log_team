@@ -618,3 +618,12 @@ Hemal Shah
 
 --under process of dashboard page completion 
 --creation of frontend of smart AI reply page 
+
+5-5-26
+
+Hemal Shah
+
+-GMB_review project for local business
+
+--completion of dashboard Page 
+--under process of AI reply backend 
